@@ -1,5 +1,11 @@
 pipeline {
-   agent any
+   //agent any
+   agent {
+      docker {
+         label 'dockerserver'
+         image 'maven:3-alpine'
+      }
+   }
    stages {
       stage('Preparation') {
          steps {
