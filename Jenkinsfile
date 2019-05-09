@@ -25,11 +25,11 @@ pipeline {
             sh 'mvn package'
          }
       }*/
-      stage('Docker Build') {
-         steps {
-            sh 'docker build -t sebenner/project_03:discover -f Dockerfile'
-            sh 'docker push sebenner/project_03:discover'
-         }
-      }
+      //stage('Docker Build') {
+      //   steps {
+      //      sh 'docker build -t sebenner/project_03:discover -f Dockerfile'
+      //      sh 'docker push sebenner/project_03:discover'
+      //   }
+      //}
    }
 }
