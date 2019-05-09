@@ -1,6 +1,9 @@
 pipeline {
    //agent any
-   agent { dockerfile true }
+   agent { 
+      label 'docker'
+      dockerfile true
+   }
    /*agent {
       docker {
          label 'dockerserver'
