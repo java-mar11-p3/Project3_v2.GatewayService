@@ -2,7 +2,7 @@ pipeline {
    //agent any
    agent { 
       label 'docker'
-      dockerfile true
+      //dockerfile true
    }
    /*agent {
       docker {
