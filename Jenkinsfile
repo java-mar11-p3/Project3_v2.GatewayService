@@ -1,8 +1,8 @@
 pipeline {
    //agent any
    agent { 
-      label 'docker'
-      //dockerfile true
+      //label 'docker'
+      dockerfile true
    }
    /*agent {
       docker {
@@ -11,29 +11,23 @@ pipeline {
       }
    }*/
    stages {
-      /*
-      stage('Preparation') {
-         steps {
-            sh 'mvn clean'
-         }
-      }*/
       stage('Compile') {
          steps {
             //sh 'mvn compile'
             sh 'mvn clean package'
          }
       }
-      /*stage('Deploy') {
+      stage('Deploy') {
          steps {
-            sh 'mvn package'
+            sh 'mvn deploy'
          }
-      }*/
+      }
       
-      stage('Docker Build') {
+      /*stage('Docker Build') {
          steps {
             sh 'docker build -t sebenner/project_03 -f Dockerfile'
             sh 'docker push sebenner/project_03'
          }
-      }
+      }*/
    }
 }
