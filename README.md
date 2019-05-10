@@ -19,7 +19,7 @@ application.properties
     - This is to register the API Gateway as a client instead of a server
     
 - spring.cloud.config.uri=http://localhost:8888
-    - This is when we have a configuration service that contains figuration files in a git repository that could contain location and         credential of our database. 
+    - This is when we have a configuration service that contains configuration files in a git repository that could contain location and         credential of our database. 
 
 
 - eureka.client.serviceUrl.defaultZone=http://localhost:8086/eureka/ 
