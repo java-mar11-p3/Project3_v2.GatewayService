@@ -12,7 +12,7 @@ pipeline {
             sh 'sudo docker login -u sebenner -p password_123 docker.io'
             sh 'sudo docker push sebenner/project_03:gateway-service'
             sh 'sudo docker login -u sebenner -p password_123 docker.io'
-            sh 'sudo docker run -p 443: sebenner/project_03:gateway-service'
+            sh 'sudo docker run -p 443:7000 sebenner/project_03:gateway-service'
          }
       }
       /*stage('Deploy') {
