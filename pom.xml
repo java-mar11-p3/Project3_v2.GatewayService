@@ -38,6 +38,7 @@
   </dependencies>
   <build>
     <finalName>Project3_v2.GatewayService</finalName>
+
 <!--     <plugins>  
         <plugin>
 				<groupId>io.fabric8</groupId>
